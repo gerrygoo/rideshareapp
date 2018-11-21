@@ -11,7 +11,7 @@ import { Store } from './Store';
 
 
 export interface LoginScreenProps extends NavigationScreenProps {
-
+    // appErrorCode: string;
 }
 
 export interface LoginScreenState {
@@ -21,7 +21,7 @@ export interface LoginScreenState {
 }
 
 @withMappedNavigationProps()
-class LoginScreen extends React.Component<NavigationScreenProps<{}>, LoginScreenState> {
+class LoginScreen extends React.Component<NavigationScreenProps<LoginScreenProps>, LoginScreenState> {
     state = {
         errorCode: '',
         mail: '',
@@ -48,7 +48,7 @@ class LoginScreen extends React.Component<NavigationScreenProps<{}>, LoginScreen
             </View>
 
             <View style = { styles.taggedTextField } >
-                <Text style = { styles.taggedTextFieldTag }  >Contraseña</Text>
+                <Text style = { styles.taggedTextFieldTag }  >{'\nContraseña'}</Text>
                 <TextInput
                     secureTextEntry
                     style = {styles.taggedTextFieldField}

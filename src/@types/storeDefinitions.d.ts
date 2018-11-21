@@ -1,4 +1,5 @@
 declare namespace FBStore {
+
     interface Time {
         hh: number;
         mm: number;
@@ -14,6 +15,17 @@ declare namespace FBStore {
         lng: number;
     }
 
+    interface Schedule {
+        mo?: Commute;
+        tu?: Commute;
+        we?: Commute;
+        th?: Commute;
+        fr?: Commute;
+        sa?: Commute;
+        su?: Commute;
+        [key: string]: Commute | undefined;
+    }
+
     interface StoreUser {
         uid?: string;
 
@@ -23,7 +35,7 @@ declare namespace FBStore {
         domain: string;
         car: boolean;
         address: Address;
-        schedule: FBStore.Commute[];
+        schedule: Schedule;
     }
 
     interface UserCreationData extends StoreUser {

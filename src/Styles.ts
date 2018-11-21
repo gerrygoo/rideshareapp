@@ -9,20 +9,21 @@ export const styles = StyleSheet.create({
     taggedTextField: {
         flexDirection: 'row',
         justifyContent: 'space-around',
+        alignItems: 'center',
         marginHorizontal: 10,
         marginVertical: 10,
         padding: 5,
         borderRadius: 3 ,
-        backgroundColor: 'rgba(91, 112, 145, 0.8)',
+        backgroundColor: 'rgba(0, 0, 0, 0.2)',
     },
     taggedTextFieldTag: {
         flex: 1,
         marginHorizontal: 10,
-        color: 'white',
+        color: 'black',
     },
     taggedTextFieldField: {
         flex: 2,
-        color: 'white',
+        color: 'black',
     },
     flex1: { flex: 1 },
     button: {
@@ -36,6 +37,7 @@ export const styles = StyleSheet.create({
     flatListRow : {
         flexDirection: "row",
         justifyContent: "space-between",
+        marginVertical: 4,
     },
     title: {
         fontSize: 30,
